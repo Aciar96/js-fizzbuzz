@@ -19,19 +19,19 @@ Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot f
 // 3- se divisibile per 5 scrivi buzz
 // 4- se divisibile per 3 AND per 5 scrivi fizzBuzz
 
-
 //creo un ciclo che conta da 1 a 100
+const blackboard = document.getElementById('blackboard');
 let content = '';
 
 for (let i = 1; i <= 100; i++) {
   console.log(i);
   content += ` ${i}`;
-  
-  if(i %= 3){
-      //per ogni volta che I e divibile per 3  gli do il valore di fizz
-    
-      
-    }
-    
+  if(i % 3){
+   // se divisibile per 3 scrivi fizz
+  }else if ( i % 5){
+      // 3- se divisibile per 5 scrivi buzz
+  }else if ( i % 3 || i % 5){
+    // 4- se divisibile per 3 AND per 5 scrivi fizzBuzz
   }
-
+}
+blackboard.innerHTML = content;
