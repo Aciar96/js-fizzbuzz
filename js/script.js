@@ -24,20 +24,20 @@ const blackboard = document.getElementById('blackboard');
 let content = '';
 
 for (let i = 1; i <= 100; i++) {
-  console.log(i);
-  content += ` ${i}`;
-  if(i % 3==0){
-   // se divisibile per 3 scrivi fizz 
-   content +=  'fizz';
-   console.log(content)
-  }else if ( i % 5==0){
-      // 3- se divisibile per 5 scrivi buzz
-    content += 'buzz';
-    console.log(content)
-  }else if ( i % 3 == 0 && i % 5 == 0){
-    // 4- se divisibile per 3 AND per 5 scrivi fizzBuzz
-    content += 'fizzbuzz';
-    console.log(content)
- }
-}
+  
+    if(i % 3 == 0 && i % 5 == 0){
+     // se divisibile per 3 scrivi fizz 
+     console.log('fizzbuzz')
+    }else if ( i % 3==0){
+        // 3- se divisibile per 5 scrivi buzz
+      console.log('fizz')
+    }else if ( i % 5 == 0){
+      // 4- se divisibile per 3 AND per 5 scrivi fizzBuzz
+      console.log('buzz')
+   }else{
+      console.log(i)
+  }
+  }
+  
+
 blackboard.innerHTML = content;
