@@ -26,12 +26,18 @@ let content = '';
 for (let i = 1; i <= 100; i++) {
   console.log(i);
   content += ` ${i}`;
-  if(i % 3){
-   // se divisibile per 3 scrivi fizz
-  }else if ( i % 5){
+  if(i % 3==0){
+   // se divisibile per 3 scrivi fizz 
+   content +=  'fizz';
+   console.log(content)
+  }else if ( i % 5==0){
       // 3- se divisibile per 5 scrivi buzz
-  }else if ( i % 3 || i % 5){
+    content += 'buzz';
+    console.log(content)
+  }else if ( i % 3 == 0 && i % 5 == 0){
     // 4- se divisibile per 3 AND per 5 scrivi fizzBuzz
-  }
+    content += 'fizzbuzz';
+    console.log(content)
+ }
 }
 blackboard.innerHTML = content;
